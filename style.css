@@ -1,0 +1,77 @@
+/* importando a fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap');
+
+/* resetando eslilo padrão do navegador e definindo a fonte */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace, sans-serif;
+}
+
+/* adicionando transição suave das cores */
+body{
+    transition: background 0.2s linear;
+}
+
+/* criando no body a classe de cor escura */
+body.dark{
+    background: #292C35;
+}
+
+/* estilizando o h1 */
+h1{
+    text-align: center;
+    margin-top: 25px;
+    font-size: 55px;
+    color: #292C35;
+    text-transform: uppercase;
+}
+
+/* criando classe de cor branca que é adicionada ao h1 quando muda o tema */
+.color{
+    color: #FFF;
+}
+
+/* estilizando a div que contén o conteúdo */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    margin: 0;
+}
+
+/* label onde as imagens e a bolinha ficam */
+.label{
+    background: #111;
+    display: flex;
+    height: 50px;
+    width: 113px;
+    border-radius: 50px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* fazendo com que o quadrado padrão do checkbox suma */
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+
+/* adicionando animação a bolinha dentro do label, quando o checkbox for clicado */
+.checkbox:checked + .label .ball{
+    transform: translateX(57px);
+}
+
+/* estilizando a bolinha que muda o tema */
+.ball{
+    width: 50px;
+    height: 46px;
+    background: white;
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
